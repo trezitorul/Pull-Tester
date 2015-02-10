@@ -15,7 +15,7 @@ int main () {
 	ErrorCode errorCode;
 	uint16_t  data;
 
-	pwOut.printf("Hello World-Initializing ADC NOW");
+	pwOut.printf("Hello World-Initializing ADC NOW" CRLF);
 	SPI     *spi = SPI::get_instance();
 	MCP3000 adc(spi, PART_NO);
 
