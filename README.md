@@ -17,7 +17,7 @@ HARDWARE TODO:
 +Fabricate PCB and Install
 
 SOFTWARE TODO:
-+Interface to MCP3204-B ADC
++Interface to MCP3204-B ADC (DONE)
 +Define Button Behaviours
 +Interface to Encoder
 +Define Serial Interface to PC

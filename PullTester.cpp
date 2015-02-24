@@ -3,10 +3,10 @@
 
 using namespace PropWare;
 
-const Port::Mask SCLK = Port::P4;
-const Port::Mask MISO = Port::P5;
-const Port::Mask MOSI = Port::P6;
-const Port::Mask CS   = Port::P7;
+const Port::Mask SCLK = Port::P29;
+const Port::Mask MISO = Port::P28;
+const Port::Mask MOSI = Port::P27;
+const Port::Mask CS   = Port::P26;
 
 const MCP3000::Channel    CHAN    = MCP3000::CHANNEL_0;
 const MCP3000::PartNumber PART_NO = MCP3000::MCP320x;
