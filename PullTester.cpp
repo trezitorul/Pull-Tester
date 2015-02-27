@@ -22,7 +22,7 @@ int main () {
 	errorCode = adc.start(MOSI, MISO, SCLK, CS);
 	pwOut.printf("ADC STARTED: (code = %d)" CRLF, errorCode);
 
-	for (int i = 0; i < 100; i++) {
+	for (int i = 0; i < 100000; i++) {
 		errorCode = adc.read(CHAN, &data);
 		pwOut.printf("The ADC value is %d (code = %d)" CRLF, data, errorCode);
 		waitcnt(SECOND + CNT);

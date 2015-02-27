@@ -1,0 +1,40 @@
+Pull Tester Project Log:
+
+Journal of Progress on the Pull Tester.
+
+2/14/15-START
+
+Today, the pull tester mechanical assembly is being completed. This means that the motor now that it has been tested externally will be remounted along with its gearing into the pull tester.
+
+Electrically, I have gotten the ADC to communicate successfully with the pull tester. However, the voltage handling circuitry is causing me grief. I am suspicious that the load cell was damaged badly since it is reporting a voltage difference between the Sig+ and Sig- leads of over 30mV with an excitation voltage of 10V. If the load cell label is correct then 100% output should be at 20mV or so. 
+
+TODO for Today:
+
+1. Tester my ADC circuit using a pot to simulate the input from the loadcell under nominal conditions, IE setup pot to vary from 0 to 20mV and watch the output
+2. Characterize the noise in my ADC and Opamp circuitry if it is a problem
+3. If opamp and adc are behaving themselves then investigate loadcell problems further...maybe add compensation to correct for offset.
+
+Notes: Hahahaha that was optimistic :P 
+
+2/14/15-END
+
+2/21/15 - START
+
+Got differential amplifier working with split power supply and 741 opamps.
+
+2/21/15 - END
+
+2/23/15 - START
+
+Now that I figured out all the idiotic things I did in the original design, I am going to use my lovely TLC opamps (of which I have greviously burned several) and a split reference power supply to go ahead and build a nice differential opamp circuit and test it out to see how it performs.
+
+I successfully constructed the differential amplifier, and figured out how to add the necessary offset to my circuit to account for the natural zero offset in the load cell. Even on the breadboard it is exhibiting .5 kg accuracy and capability. Without any noise filtering. I will add the noise filtering tomorrow. I may base my first PCB design off of this setup, I would prefer to work with an inamp (which I can buy when I order the rest of the parts for the final PCB circuit). Tomorrow I will transfer this circuit onto the another PCB and interface it with the ADC circuit and hopefully have my load cell speak digitally.
+
+2/23/15 - END
+
+2/25/15 - START
+
+Yesterday, I managed to get the whole amplifier circuit working on the new breadboard, however, when the propeller would turn on it would trash the virtual ground. I tried making an opamp voltage regulator to buffer the output from my virtual ground. It did not work because the maximum amount of current that
+the TLC opamp can sink is only 40ma or so and prop draws at max 300ma. So today I fixed this by adding a push pull to increase current carrying capacity and with some filter caps it works perfectly. The output is surprisingly stable. If the output indicates anything I may be able to handle .1 kg resolution. Which is pretty sweet for something I built myself.
+
+2/25/15 - END
