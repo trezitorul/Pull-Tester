@@ -32,9 +32,19 @@ I successfully constructed the differential amplifier, and figured out how to ad
 
 2/23/15 - END
 
-2/25/15 - START
+2/26/15 - START
 
 Yesterday, I managed to get the whole amplifier circuit working on the new breadboard, however, when the propeller would turn on it would trash the virtual ground. I tried making an opamp voltage regulator to buffer the output from my virtual ground. It did not work because the maximum amount of current that
 the TLC opamp can sink is only 40ma or so and prop draws at max 300ma. So today I fixed this by adding a push pull to increase current carrying capacity and with some filter caps it works perfectly. The output is surprisingly stable. If the output indicates anything I may be able to handle .1 kg resolution. Which is pretty sweet for something I built myself.
 
-2/25/15 - END
+2/26/15 - END
+
+2/27/15 - START
+
+Today, now that the ADC and load cell are cooperating I am hoping to attach the switches and the the VFD-M motor driver to the propeller. I want to just breadboad the interface today to the relays and the switches. Over the weekend I hope to finally interface to the encoder hardware wise. Once all of this is done I want to write software to record pull test data and get the system provisionally operational on breadboards so I can use it for experiments. However, in my spare time I want to design and fabricate a pcb and put some higher grad components on it. 
+
+The hardest task for today is to interface with the VFD motor. I will do that first. Then the switches. 
+
+I have interfaced to the motor with NPN transistors (2N2222) and discovered that the Encoder electrical assembly will be quite simple. Thus I have gone ahead and repaired the encoder cable. I have also begun to make crude pin header adapters for all the plugs inside of the machine. The plan is to finish off the electrical assembly and then move on to exclusively software development. Possibly as early as tomorrow.
+
+2/27/15 - END
