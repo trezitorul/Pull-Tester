@@ -48,3 +48,20 @@ The hardest task for today is to interface with the VFD motor. I will do that fi
 I have interfaced to the motor with NPN transistors (2N2222) and discovered that the Encoder electrical assembly will be quite simple. Thus I have gone ahead and repaired the encoder cable. I have also begun to make crude pin header adapters for all the plugs inside of the machine. The plan is to finish off the electrical assembly and then move on to exclusively software development. Possibly as early as tomorrow.
 
 2/27/15 - END
+
+3/2/15 - START
+
+Weekend was not terribly productive, all I managed to do was make the pin headers and repair all broken cables. I am now going to do the electrical wiring for the circuitry. If all goes well that should be finished and stabilized by the end of today.
+
+TODO Today: 
+1. Wire up and down switches (DONE)
+2. Wire up encoder (DONE)
+3. Wire safeties (Limit switches) (DONE)
+4. Wire LoadCell Plug (DONE)
+5. Wire VFD Power Input (Including Power and EStop) (DONE)
+6. Mount Circuitry Inside of PullTester (NOT DONE)
+7. If time write demo code demonstrating loadcell functionality, button functionality, and motor functionality (NOT DONE)
+
+I successfully wired all components, and optically verified that they are correctly wired. The Estop and switch are both correctly wired and the system now has a master off switch.
+
+3/2/15 - END
