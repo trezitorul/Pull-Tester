@@ -65,3 +65,33 @@ TODO Today:
 I successfully wired all components, and optically verified that they are correctly wired. The Estop and switch are both correctly wired and the system now has a master off switch.
 
 3/2/15 - END
+
+3/4/15 - START
+
+I have not yet mounted the breadboard circuitry, however, as I mentioned last time I did manage to get everything wired up. I will mount everything when I am satisfied with its performance.
+
+I am now going to start writing the beginning of a diagnostics and learning system. 
+
+TODO:
+
+1. Test to verify Loadcell is behaving nominally despite relocation and plug wiring (VERIFIED)
+2. Test motor control (VERIFIED)
+a. UP (VERIFIED)
+b. Down (VERIFIED)
+3. Test Limit Switch override capability (VERIFIED)
+a. UP (VERIFIED)
+b. DOWN (VERIFIED)
+4. Test Input Buttons
+a. UP
+b. Down
+5. Write Simple Manual Control System 
+
+I verified that the load cell is working properly, despite the fact that I originally had it wired backwards. Now its time to test the motor control capability. 
+
+The motors according to my notes are controlled by pins M0 and M1. I am now going to write a simple demo in which the motor is commanded to move up and then down again endlessly in a cycle.
+
+The Motors and the limit switches are all operating as would be expected. The only unusual part is that the serial comms seem to die shortly after the system starts... It is entirely possible that the motor noise is completely trashing my serial comms or the grounding. 
+
+Confirmed it is an issue with the serial comms. I shut off the motor and ran the prop without the motors influence and the code behaved exactly as would have been expected.
+
+The buttons do work, however, they are mysteriously shorted together. So if one goes hot then both go hot, I verified this with my multimeter, and by removing one of the pins. Additionally, the switch is staying live for some time after being shut down, I believe that I need to add a 10k or so resistor as a pull down to bring the whole system down otherwise the charge has to bleed off throught the propeller pins. I will do that tomorrow since I am just too sleepy right now.
